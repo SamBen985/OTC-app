@@ -24,7 +24,7 @@ const Filters = () => {
 
   return (
     <div
-      className="w-full h-12 border-2 border-gray-100 rounded-lg
+      className="w-[80%] m-auto h-12 border-2 border-gray-100 rounded-lg
     flex items-center justify-between relative
     "
     >

@@ -1,13 +1,14 @@
 import { useContext } from "react";
 import { CryptoContext } from "../context/CryptoContext";
+import Pagination from "./Pagination";
 
 function TableComponent() {
   const { cryptoData } = useContext(CryptoContext);
 
   return (
     <>
-      <div className="bg-gray-500 w-screen h-screen">
-        <div className="flex flex-col mt-9 border border-gray-100 rounded w-[80vw] mx-auto">
+      <div className="bg-gray-500 w-auto h-screen">
+        <div className="flex m-auto flex-col mt-9 border border-gray-100 rounded w-[80vw] mx-auto">
           {cryptoData ? (
             <table className="w-full table-auto">
               <thead className="capitalize text-base text-gray-100 fonr-md border-b border-gray-100 ">
@@ -106,6 +107,20 @@ function TableComponent() {
               </tbody>
             </table>
           ) : null}
+        </div>
+        <div className="flex w-[80%] m-auto items-center justify-between mt-4 capitalize h-[2rem]">
+          <span>
+            Data provided by{" "}
+            <a
+              className="text-cyan"
+              href="http://www.coingecko.com"
+              rel="noreferrer"
+              target={"_blank"}
+            >
+              CoinGecko
+            </a>
+          </span>
+          <Pagination />
         </div>
       </div>
     </>
